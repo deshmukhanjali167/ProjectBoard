@@ -1,0 +1,41 @@
+
+<div class="container drops">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 py-5">
+            <div class="d-flex justify-content-center py-2">
+                <span class="text-center ps-2 pro icon_s fs-1"> <i class="bi bi-vector-pen pe-3"></i><b>Project
+                        Board</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-12 col-sm-12 col-md-12">
+            <div class="kanban-board">
+                <div class="column todo" (dragover)="OnDragOver($event)" (drop)="onDrop($event,'To Do')">
+                    <div class="column-header text-center pb-2 fs-4 heading fw-bold">To Do</div>
+                    <div class="task fond_s" draggable="true" *ngFor="let item of filterticket('To Do')"
+                        (dragstart)="onDrapStart(item)">
+                        <b>{{item.ticketid}}</b><br>
+                        {{item.ticketname}}
+                    </div>
+                </div>
+                <div class="column progess" (dragover)="OnDragOver($event)" (drop)="onDrop($event,'In Progress')">
+                    <div class="column-header text-center pb-2 fs-4 heading fw-bold">Progress</div>
+                    <div class="task fond_s" draggable="true" *ngFor="let item of filterticket('In Progress')"
+                        (dragstart)="onDrapStart(item)">
+                        <b>{{item.ticketid}}</b><br>
+                        {{item.ticketname}}
+                    </div>
+                </div>
+                <div class="column done" (dragover)="OnDragOver($event)" (drop)="onDrop($event,'Done')">
+                    <div class="column-header text-center pb-2  fs-4 heading fw-bold">Done</div>
+                    <div class="task fond_s" draggable="true" *ngFor="let item of filterticket('Done')"
+                        (dragstart)="onDrapStart(item)">
+                        <b>{{item.ticketid}}</b><br>
+                        {{item.ticketname}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

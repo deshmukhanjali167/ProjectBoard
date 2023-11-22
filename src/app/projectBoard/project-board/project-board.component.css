@@ -1,0 +1,63 @@
+.pro {
+    font-family: 'Dancing Script', cursive;
+}
+
+.icon_s {
+    color: gold;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+}
+
+.todo {
+    background: aquamarine;
+}
+
+.progess {
+
+    background: #a5c5c5;
+}
+
+.done {
+    background: #dc3545;
+}
+
+.column {
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    padding: 10px;
+}
+
+.column-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.task {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 320px) {
+    .fond_s {
+        font-size: 8px;
+
+
+    }
+
+    .heading {
+        font-size: 16px;
+
+    }
+}
+
+
+
+
